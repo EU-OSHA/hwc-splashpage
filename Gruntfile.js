@@ -45,7 +45,7 @@ module.exports = function(grunt) {
             expand: true,
             cwd: "node_modules/moment/min/",
             src: "moment.min.js",
-            dest: "js/"
+            dest: "js/contrib/"
           }
         ]
       }
