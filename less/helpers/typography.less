@@ -1,0 +1,17 @@
+.embed-font(@family, @file, @weight, @style: normal, @path: @font-path) {
+  @font-face {
+    font-family: @family;
+    src: url('@{path}@{file}.eot');
+
+    src: url('@{path}@{file}.eot?#iefix') format('embedded-opentype'),
+         url('@{path}@{file}.woff') format('woff'),
+         url('@{path}@{file}.ttf') format('truetype');
+
+    font-weight: @weight;
+    font-style: @style;
+  }
+}
+
+.no-br {
+  white-space: nowrap;
+}
