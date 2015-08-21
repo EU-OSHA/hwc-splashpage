@@ -1,0 +1,65 @@
+// Media query breakpoints
+@screen-phone:               480px;
+@screen-tablet:              768px;
+@screen-desktop:             1160px;
+
+  //=>
+  @screen-phone-max:           (@screen-phone - 1px);
+  @screen-tablet-max:          (@screen-tablet - 1px);
+  @screen-desktop-max:         (@screen-desktop - 1px);
+
+// Metrics
+@rem:                        15px;
+@rem-smaller:                13px;
+@rem-larger:                 18px;
+
+@padding-v-small:            .2rem;
+@padding-h-small:            .25rem;
+@padding-v:                  .4rem;
+@padding-h:                  .5rem;
+@padding-v-large:            .6rem;
+@padding-h-large:            .8rem;
+@padding-v-huge:             1rem;
+@padding-h-huge:             1.4rem;
+
+  //=>
+  @padding-small:              @padding-v-small @padding-h-small;
+  @padding:                    @padding-v @padding-h;
+  @padding-large:              @padding-v-large @padding-h-large;
+  @padding-huge:               @padding-v-huge @padding-h-huge;
+
+@radius:              .25em;
+
+// Swatches
+@color-blue:                 #003399;
+@color-orange:               #f8a704;
+@color-red:                  #df2047;
+@color-green:                #f15a24;
+@color-purple:               #5b07a5; // #6B06E8;
+
+// Typography
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,800);
+@font-path:                  "../fonts/";
+@font-family-sans-serif:     "Open Sans", sans-serif;
+@font-family-serif:          serif;
+@font-family-monospace:      monospace;
+@larger:                     (16 / unit(@rem) * 100%);
+@smaller:                    (12 / unit(@rem) * 100%);
+  
+  // =>
+  @font-family:                @font-family-sans-serif;
+
+@color-body:                 @color-blue;
+@color-emphasis:             @color-blue;
+
+@color-anchor:               #034ea2;
+@color-anchor-hover:         #1679d3;
+@color-anchor-visited:       #845299;
+
+@body-bg:                    transparent;
+@line-height-body:           1.4;
+@leading:                    1rem;
+@indent:                     2rem;
+
+  // =>
+  @line-height-rem:            (1rem * @line-height-body);

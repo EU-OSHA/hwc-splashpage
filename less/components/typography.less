@@ -1,0 +1,44 @@
+html {
+  font-size: @rem;
+  &.smaller {
+    font-size: @rem-smaller;
+  }
+  &.larger {
+    font-size: @rem-larger;
+  }
+}
+
+body {
+  font-family: @font-family;
+  line-height: @line-height-body;
+  color: @color-body;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: @leading;
+}
+
+a {
+  text-decoration: none;
+  color: @color-anchor;
+  &:hover {
+    color: @color-anchor-hover;
+  }
+}
+
+img {
+  vertical-align: middle;
+}
+
+ul,
+ol,
+p {
+  margin-top: 0;
+  margin-bottom: @leading;
+}
