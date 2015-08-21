@@ -7,7 +7,7 @@ $(document).ready(function() {
   console.log(eventTime.format());
   
   var updateCounter = function(duration) {
-    $("#count-days .counter-value").text(duration.days());
+    $("#count-days .counter-value").text(Math.floor(duration.asDays()));
     $("#count-hours .counter-value").text(duration.hours());
     $("#count-minutes .counter-value").text(duration.minutes());
     $("#count-seconds .counter-value").text(duration.seconds());
@@ -15,7 +15,7 @@ $(document).ready(function() {
 
   var currentTime = moment();
   var diffTime = eventTime - currentTime;
-  var duration = moment.duration(diffTime*1000, 'milliseconds');
+  var duration = moment.duration(diffTime, 'milliseconds');
   var interval = 1000;
   updateCounter(duration);
 
