@@ -4,7 +4,7 @@ $(document).ready(function() {
 
   var eventTime = moment($("#eventTime").attr('datetime'));
 
-  console.log(eventTime.format());
+  // console.log(eventTime.format());
   
   var updateCounter = function(duration) {
     $("#count-days .counter-value").text(Math.floor(duration.asDays()));
