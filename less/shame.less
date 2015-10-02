@@ -5,7 +5,7 @@
 @counter-width: (64 / unit(@rem) * 1rem);
 @title-width: (140 / unit(@rem) * 1rem);
 @banner-text-width: (320 / unit(@rem) * 1rem);
-@banner-height: (400 / unit(@rem) * 1rem);
+@banner-height: 406px;
 
 @12px: (12 / unit(@rem) * 1rem);
 @15px: (15 / unit(@rem) * 1rem);
@@ -90,7 +90,7 @@ html.larger {
 
 #banner {
   min-height: @banner-height;
-  padding: @inset;
+  padding: (@inset-h - 0.65) @inset-v 0;
   color: #fff;
   background-color: #446c00;
   background-image: linear-gradient(to right, #678900, #acc700);
