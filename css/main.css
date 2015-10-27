@@ -625,6 +625,10 @@ html.larger .page-footer {
   height: 17px;
   background: url('../img/osha-bg-arrow.png') center center no-repeat;
 }
+#message {
+  text-align: center;
+  margin: 0 1rem 1rem 1rem;
+}
 footer {
   padding: 2rem 2.66666667rem;
   background-color: #608000;
