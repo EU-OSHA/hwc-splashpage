@@ -627,7 +627,11 @@ html.larger .page-footer {
 }
 #message {
   text-align: center;
+  color: black;
   margin: 0 1rem 1rem 1rem;
+}
+#message a {
+  border-bottom: 1px solid #dc2f82;
 }
 footer {
   padding: 2rem 2.66666667rem;
