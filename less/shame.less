@@ -4,7 +4,7 @@
 
 @counter-width: (64 / unit(@rem) * 1rem);
 @title-width: (140 / unit(@rem) * 1rem);
-@banner-text-width: (320 / unit(@rem) * 1rem);
+@banner-text-width: (360 / unit(@rem) * 1rem);
 @banner-height: 406px;
 
 @12px: (12 / unit(@rem) * 1rem);
@@ -94,6 +94,11 @@ html.larger {
   color: #fff;
   background-color: #446c00;
   background-image: linear-gradient(to right, #678900, #acc700);
+
+  .banner-body {
+    max-width: 1440px;
+  }
+
   .comming-soon {
     font-weight: 800;
     font-size: @18px;
@@ -109,7 +114,7 @@ html.larger {
     font-size: @22px;
     margin-bottom: @40px;
   }
-  
+
 
   .time-and-counters {
     table-layout: fixed;
