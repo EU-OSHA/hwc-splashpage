@@ -1,10 +1,10 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,800);
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS and IE text size adjust after device orientation change,
  *    without disabling user zoom.
  */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,800);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -428,6 +428,13 @@ html.larger #banner,
 html.larger .page-footer {
   background-size: cover;
 }
+html.larger .page-footer a {
+  font-size: 0.8rem;
+  color: white;
+}
+html.larger .page-footer a:hover {
+  text-decoration: underline;
+}
 .page-header {
   position: relative;
   padding: 2rem 2.66666667rem;
@@ -502,6 +509,9 @@ html.larger .page-footer {
   background-image: -webkit-linear-gradient(left, #678900, #acc700);
   background-image: linear-gradient(to right, #678900, #acc700);
 }
+#banner .banner-body {
+  max-width: 1440px;
+}
 #banner .comming-soon {
   font-weight: 800;
   font-size: 1.2rem;
@@ -558,7 +568,7 @@ html.larger .page-footer {
   }
   #banner .banner-title,
   #banner .banner-subtitle {
-    max-width: 21.33333333rem;
+    max-width: 24rem;
     margin-left: auto;
   }
 }
@@ -646,7 +656,7 @@ footer .slogan {
 }
 footer .credits {
   font-size: 0.8rem;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
 }
 @media (min-width: 768px) {
   footer {
