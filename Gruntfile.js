@@ -49,9 +49,19 @@ module.exports = function(grunt) {
           }
         ]
       }
+    },
+    uglify: {
+      options: {
+        mangle: false
+      },
+      jquery_cookie: {
+        files: {
+          'js/contrib/jquery.cookie.min.js': ['js/contrib/jquery.cookie.js']
+        }
+      }
     }
   });
 
   grunt.registerTask('default', ['less', 'watch']);
-  grunt.registerTask('dist', ['less', 'postcss', 'copy']);
+  grunt.registerTask('dist', ['less', 'postcss', 'copy', 'uglify']);
 };
