@@ -54,14 +54,25 @@ module.exports = function(grunt) {
       options: {
         mangle: false
       },
-      jquery_cookie: {
+      minify: {
         files: {
           'js/contrib/jquery.cookie.min.js': ['js/contrib/jquery.cookie.js']
         }
       }
+    },
+    zip: {
+      'release.zip': [
+        'css/main.css',
+        'documents/**/*',
+        'img/**/*',
+        'js/**/*',
+        'favicon.ico',
+        'index.html',
+        'privacy.html'
+      ]
     }
   });
 
   grunt.registerTask('default', ['less', 'watch']);
-  grunt.registerTask('dist', ['less', 'postcss', 'copy', 'uglify']);
+  grunt.registerTask('dist', ['less', 'postcss', 'copy', 'uglify', 'zip']);
 };
