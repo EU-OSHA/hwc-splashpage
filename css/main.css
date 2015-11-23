@@ -428,6 +428,13 @@ html.larger #banner,
 html.larger .page-footer {
   background-size: cover;
 }
+html.larger .page-footer a {
+  font-size: 0.8rem;
+  color: white;
+}
+html.larger .page-footer a:hover {
+  text-decoration: underline;
+}
 .page-header {
   position: relative;
   padding: 2rem 2.66666667rem;
@@ -646,10 +653,17 @@ footer .slogan {
 }
 footer .credits {
   font-size: 0.8rem;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
 }
 @media (min-width: 768px) {
   footer {
     background: #608000 url('../img/osha-bg-footer.png') top left no-repeat;
   }
+}
+.page-footer a {
+  font-size: 0.8rem;
+  color: white;
+}
+.page-footer a:hover {
+  text-decoration: underline;
 }
