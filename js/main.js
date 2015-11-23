@@ -11,7 +11,7 @@ $(document).ready(function() {
     $("#count-hours .counter-value").text(duration.hours());
     $("#count-minutes .counter-value").text(duration.minutes());
     $("#count-seconds .counter-value").text(duration.seconds());
-  }
+  };
 
   var currentTime = moment();
   var diffTime = eventTime - currentTime;
