@@ -687,3 +687,47 @@ footer .credits {
   content: ">";
   padding-right: 5px;
 }
+
+.cookie-consent {
+    display: block;
+    background: #575958;
+    color: #fff;
+    padding: 1rem  2.66666667rem;
+}
+.clearfix {
+    clear: both;
+}
+.cookie-consent-text {
+    font-weight: bold;
+    font-size: 12px;
+    float: left;
+    width: 70%;
+}
+.cookie-consent-buttons {
+    float: left;
+    width: 30%;
+    text-align: right;
+}
+.cookie-consent-buttons button a {
+    color: #000;
+}
+.cookie-consent-buttons button {
+    margin: 5px;
+    vertical-align: middle;
+    -moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0.05,#ededed),color-stop(1,#dfdfdf));
+    background: -moz-linear-gradient(center top,#ededed 5%,#dfdfdf 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed',endColorstr='#dfdfdf');
+    background-color: #ededed;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid #dcdcdc;
+    color: #000;
+    font-weight: bold;
+    padding: 4px 8px;
+    text-decoration: none;
+    text-shadow: 1px 1px 0px #ffffff;
+}
