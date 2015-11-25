@@ -1,6 +1,7 @@
 module.exports = function(grunt) {
   require('jit-grunt')(grunt);
 
+  grunt.loadNpmTasks('grunt-text-replace');
   grunt.initConfig({
     less: {
       development: {
@@ -60,6 +61,18 @@ module.exports = function(grunt) {
         }
       }
     },
+    replace: {
+      piwik_siteid: {
+        src: ['*.html'],
+        overwrite: true,
+        replacements: [
+          {
+            from: '["setSiteId", "11"]',
+            to: '["setSiteId", "2"]'
+        }
+        ]
+      }
+    },
     zip: {
       'release.zip': [
         'css/main.css',
@@ -74,5 +87,6 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('default', ['less', 'watch']);
-  grunt.registerTask('dist', ['less', 'postcss', 'copy', 'uglify', 'zip']);
+  grunt.registerTask('dist', ['less', 'postcss', 'copy', 'uglify']);
+  grunt.registerTask('pack', ['less', 'postcss', 'copy', 'uglify', 'replace', 'zip']);
 };
