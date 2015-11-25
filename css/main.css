@@ -505,7 +505,7 @@ html.larger .page-footer a:hover {
   min-height: 406px;
   padding: 2.01666667rem 2rem 0;
   color: #fff;
-  background-color: #446c00;
+  background-color: #6b9000;
   background-image: -webkit-linear-gradient(left, #678900, #acc700);
   background-image: linear-gradient(to right, #678900, #acc700);
 }
@@ -563,7 +563,7 @@ html.larger .page-footer a:hover {
 }
 @media (min-width: 768px) {
   #banner {
-    background: #446c00 url('../img/osha-bg-illustration.png') top right no-repeat;
+    background: #6b9000 url('../img/osha-bg-illustration.png') top right no-repeat;
     text-align: right;
   }
   #banner .banner-title,
