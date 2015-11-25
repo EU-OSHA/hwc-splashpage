@@ -18,6 +18,14 @@ grunt dist
 git commit CSS & resources
 ```
 
+## To create a release
+
+```
+grunt pack
+```
+
+Will create release.zip that is deployable in root directory of the web server
+
 ## Demo URL
 
     http://eu-osha.github.io/hwc-splashpage
