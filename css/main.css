@@ -563,7 +563,7 @@ html.larger .page-footer a:hover {
 }
 @media (min-width: 768px) {
   #banner {
-    background: #6b9000 url('../img/osha-bg-illustration.png') top right no-repeat;
+    background: #6b9000 url('../img/osha-bg-illustration-panoramic.png') top left no-repeat;
     text-align: right;
   }
   #banner .banner-title,
