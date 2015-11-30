@@ -46,7 +46,7 @@
             "</div><div class='cookie-consent-buttons'></div><div class='clearfix'></div></div></div>");
 
             button_accept = $("<button type='button' class='btn-ok'>OK, I agree</button>").click(acceptCookie);
-            button_deny = $('<button type="button" class="btn-decline"><a href="privacy.html">No, give me more info</button>');
+            button_deny = $('<button type="button" class="btn-decline" onclick="window.location=\'privacy.html\'">No, give me more info</button>');
 
             $("body").prepend(div);
             $('div.cookie-consent-buttons').append(button_accept).append(button_deny);
