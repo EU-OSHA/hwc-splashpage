@@ -1,5 +1,11 @@
+## URL
+
+    * Test: http://eu-osha.github.io/hwc-splashpage
+    * Production: https://www.healthy-workplaces.eu
+
 ## Pre-requisites
 
+Install NPM & Grunt to call the build tasks.
 ```
 npm install -g grunt grunt-cli # global package to run grunt
 ```
@@ -18,17 +24,16 @@ grunt dist
 git commit CSS & resources
 ```
 
-## To create a release
+## To create a new release
 
-```
-grunt pack
-```
+1. Bring all the changes to the ``gh-pages`` branch (i.e. ``git checkout gh-pages && git merge master``)
+2. Build the distribution ``grunt pack``, which will result in a new build artifact called ``release.zip``. This is the release to be deployed in production.
 
-Will create release.zip that is deployable in root directory of the web server
+This will create release.zip that is deployable in root directory of the web server.
 
-## Demo URL
+3. Visit the *Release* tab and draft a new release, add comments, and upload the ``release.zip`` (first rename to next increment i.e ``release-1.2.4.zip``)
 
-    http://eu-osha.github.io/hwc-splashpage
+Info: The ``grunt pack`` compiles the LESS files into CSS, minifies the JS, and replace the Piwik production key in each HTML.
 
 ## Deployment guidelines
 
