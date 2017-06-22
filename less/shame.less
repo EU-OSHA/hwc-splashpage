@@ -96,16 +96,23 @@ html.larger {
 }
 
 #banner {
+  position: relative;
   min-height: @banner-height;
   padding: (@inset-h - 0.65) @inset-v 0;
   color: #fff;
   background-color: #6b9000;
   background-image: linear-gradient(to right, #678900, #acc700);
-
-  .banner-body {
-    max-width: 1460px;
+  .container {
+    text-align: center;
+    position: relative;
   }
-
+  .mobile-header-bg {
+    position: absolute;
+    height: 100%;
+    top:0;
+    left: 0;
+    opacity: 0.5;
+  }
   .comming-soon {
     font-weight: 800;
     font-size: @18px;
@@ -122,7 +129,6 @@ html.larger {
     margin-bottom: @40px;
   }
 
-
   .time-and-counters {
     table-layout: fixed;
     border-collapse: separate;
@@ -136,9 +142,6 @@ html.larger {
       &:first-child {
         border-left: 1px solid;
       }
-    }
-    @media (min-width: @screen-tablet) {
-      margin-left: auto;
     }
   }
   #eventTime {
@@ -157,19 +160,87 @@ html.larger {
   .counter-label {
     font-size: 10px;
   }
+  .illustration {
+    display: none;
+    img {
+      width: 100%;
+    }
+  }
+  .header-right-side {
+    text-align: left;
+  }
   @media (min-width: @screen-tablet) {
-    background: #6b9000 url('../img/osha-bg-illustration.png') top right no-repeat;
-    text-align: right;
+    .mobile-header-bg {
+      display: none;
+    }
+    .illustration {
+      display: inline-block;
+      float: left;
+    }
+    .header-right-side {
+      display: inline-block;
+    }
+    background: -webkit-linear-gradient(left, rgb(173, 198, 0) 0%, rgb(104, 177, 30) 100%);
+    background: -o-linear-gradient(left, rgb(173, 198, 0) 0%, rgb(104, 177, 30) 100%);
+    background: -ms-linear-gradient(left, rgb(173, 198, 0) 0%, rgb(104, 177, 30) 100%);
+    background: -moz-linear-gradient(left, rgb(173, 198, 0) 0%, rgb(104, 177, 30) 100%);
+    background: linear-gradient(to right, rgb(173, 198, 0) 0%, rgb(104, 177, 30) 100%);
+    text-align: left;
     .banner-title,
     .banner-subtitle {
       max-width: @banner-text-width;
       margin-left: auto;
     }
   }
-  @media (min-width: @screen-desktop) {
-    background-position: top left;
-    background: #6b9000 url('../img/osha-bg-illustration-panoramic.png') top left no-repeat;
+
+  @media(min-width: @screen-tablet) and (max-width: @screen-desktop) {
+    padding: 1rem 0;
+    min-height: initial;
+     .illustration, .header-right-side{
+      float: left;
+      display: block;
+    }
+
+    .banner-title {
+      font-size: 1.3rem;
+      margin-left: 0;
+    }
+    .time-and-counters td {
+      min-width: 2rem;
+    }
+    .banner-subtitle {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+    .counter-balue {
+      font-size: 1.6rem;
+    }
+    #eventTime{
+      font-size: 1.9rem;
+    }
+    .time-and-counters {
+      margin-left: 0;
+    }
+
+    .illustration{
+      width: 60%;
+    }
+     .header-right-side {
+      width: 30%;
+      margin-left: 1rem;
+     }
   }
+@media (max-width: @screen-tablet) {
+  .time-and-counters {
+    margin: auto;
+  }
+  .header-right-side {
+    text-align: center;
+  }
+
+}
+
+
 }
 
 #downloads {
@@ -179,6 +250,9 @@ html.larger {
   ul {
     .no-list;
     margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   li {
     display: inline-block;
@@ -255,7 +329,7 @@ footer {
     margin-bottom: 1rem;
   }
   @media (min-width: @screen-tablet) {
-    background: #608000 url('../img/osha-bg-footer.png') top left no-repeat;
+    background: #53ab25 url('../img/osha-bg-footer.png') top left no-repeat;
   }
 }
 
