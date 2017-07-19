@@ -1,10 +1,10 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,800);
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS and IE text size adjust after device orientation change,
  *    without disabling user zoom.
  */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,800);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -385,6 +385,12 @@ html {
 body {
   min-height: 100%;
 }
+.container {
+  max-width: 1200px;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
 html {
   font-size: 15px;
 }
@@ -453,7 +459,7 @@ html.larger .page-footer a:hover {
   font-size: 1.2rem;
   font-weight: 700;
 }
-@media (max-width: 767px) {
+@media (max-width: 841px) {
   .page-header {
     padding-top: 12px;
     padding-bottom: 12px;
@@ -496,21 +502,33 @@ html.larger .page-footer a:hover {
 .font-size [data-font="larger"] {
   font-size: larger;
 }
-@media (max-width: 768px) {
+@media (max-width: 842px) {
   .font-size {
     display: none;
   }
 }
 #banner {
+  position: relative;
   min-height: 406px;
   padding: 2.01666667rem 2rem 0;
   color: #fff;
   background-color: #6b9000;
-  background-image: -webkit-linear-gradient(left, #678900, #acc700);
   background-image: linear-gradient(to right, #678900, #acc700);
 }
-#banner .banner-body {
-  max-width: 1460px;
+#banner .container {
+  text-align: center;
+  position: relative;
+}
+#banner .mobile-header-bg {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  width: 100%;
+  background: url("../img/header-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 #banner .comming-soon {
   font-weight: 800;
@@ -542,11 +560,6 @@ html.larger .page-footer a:hover {
 #banner .time-and-counters td:first-child {
   border-left: 1px solid;
 }
-@media (min-width: 768px) {
-  #banner .time-and-counters {
-    margin-left: auto;
-  }
-}
 #banner #eventTime {
   font-size: 2.4rem;
   font-weight: 700;
@@ -561,10 +574,29 @@ html.larger .page-footer a:hover {
 #banner .counter-label {
   font-size: 10px;
 }
-@media (min-width: 768px) {
+#banner .illustration {
+  display: none;
+}
+#banner .illustration img {
+  width: 100%;
+}
+#banner .header-right-side {
+  text-align: left;
+}
+@media (min-width: 842px) {
   #banner {
-    background: #6b9000 url('../img/osha-bg-illustration-panoramic.png') top left no-repeat;
-    text-align: right;
+    background: linear-gradient(to right, #adc600 0%, #68b11e 100%);
+    text-align: left;
+  }
+  #banner .mobile-header-bg {
+    display: none;
+  }
+  #banner .illustration {
+    display: inline-block;
+    float: left;
+  }
+  #banner .header-right-side {
+    display: inline-block;
   }
   #banner .banner-title,
   #banner .banner-subtitle {
@@ -572,9 +604,50 @@ html.larger .page-footer a:hover {
     margin-left: auto;
   }
 }
-@media (min-width: 1160px) {
+@media (min-width: 842px) and (max-width: 1160px) {
   #banner {
-    background-position: top left;
+    padding: 1rem 0;
+    min-height: initial;
+  }
+  #banner .illustration,
+  #banner .header-right-side {
+    float: left;
+    display: block;
+  }
+  #banner .banner-title {
+    font-size: 1.3rem;
+    margin-left: 0;
+  }
+  #banner .time-and-counters td {
+    min-width: 2rem;
+  }
+  #banner .banner-subtitle {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  #banner .counter-balue {
+    font-size: 1.6rem;
+  }
+  #banner #eventTime {
+    font-size: 1.9rem;
+  }
+  #banner .time-and-counters {
+    margin-left: 0;
+  }
+  #banner .illustration {
+    width: 60%;
+  }
+  #banner .header-right-side {
+    width: 30%;
+    margin-left: 1rem;
+  }
+}
+@media (max-width: 842px) {
+  #banner .time-and-counters {
+    margin: auto;
+  }
+  #banner .header-right-side {
+    text-align: center;
   }
 }
 #downloads {
@@ -586,6 +659,14 @@ html.larger .page-footer a:hover {
   padding-left: 0;
   list-style: none;
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 #downloads li {
   display: inline-block;
@@ -646,7 +727,6 @@ html.larger .page-footer a:hover {
 footer {
   padding: 2rem 2.66666667rem;
   background-color: #608000;
-  background-image: -webkit-linear-gradient(left, #3f6200, #608000);
   background-image: linear-gradient(to right, #3f6200, #608000);
   color: #fff;
 }
@@ -658,9 +738,9 @@ footer .credits {
   font-size: 0.8rem;
   margin-bottom: 1rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 842px) {
   footer {
-    background: #608000 url('../img/osha-bg-footer.png') top left no-repeat;
+    background: #53ab25 url('../img/osha-bg-footer.png') top left no-repeat;
   }
 }
 .page-footer a {
