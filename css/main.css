@@ -459,6 +459,12 @@ html.larger .page-footer a:hover {
   font-size: 1.2rem;
   font-weight: 700;
 }
+@media (max-width: 320px) {
+  .page-header {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+}
 @media (max-width: 841px) {
   .page-header {
     padding-top: 12px;
