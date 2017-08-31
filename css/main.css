@@ -557,19 +557,16 @@ html.larger .page-footer a:hover {
   background-size: cover;
 }
 #banner .comming-soon {
-  font-weight: 800;
+  font-weight: 600;
   font-size: 1.2rem;
+  margin-top: 1.33333333rem;
   margin-bottom: 1.33333333rem;
 }
 #banner .banner-title {
   margin-bottom: 0;
   font-weight: 700;
-  font-size: 1.86666667rem;
+  font-size: 2em;
   line-height: 1.2;
-}
-#banner .banner-subtitle {
-  font-size: 1.46666667rem;
-  margin-bottom: 2.4rem;
 }
 #banner .time-and-counters {
   table-layout: fixed;
@@ -628,8 +625,7 @@ html.larger .page-footer a:hover {
   #banner .header-right-side {
     display: inline-block;
   }
-  #banner .banner-title,
-  #banner .banner-subtitle {
+  #banner .banner-title {
     max-width: 24rem;
     margin-left: auto;
   }
@@ -650,10 +646,6 @@ html.larger .page-footer a:hover {
   }
   #banner .time-and-counters td {
     min-width: 2rem;
-  }
-  #banner .banner-subtitle {
-    font-size: 1.2rem;
-    margin: 0;
   }
   #banner .counter-balue {
     font-size: 1.6rem;
