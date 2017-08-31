@@ -39,13 +39,41 @@ html.larger {
     padding: 0 @12px;
     vertical-align: bottom;
   }
+  .hw-logo {
+    img {
+      width: 150px;
+      height: auto;
+    }
+  }
+  .eu-logo {
+    img {
+      padding-top: 85px;
+    }
+    a {
+      img {
+        padding-top: 10px;
+      }
+    }
+  }
   .logo {
     border-right: 1px solid;
   }
   .title {
-    width: @title-width;
-    font-size: @18px;
-    font-weight: 700;
+    //width: @title-width;
+    //font-size: @18px;
+    //font-weight: 700;
+    width: auto;
+    max-width: 315px;
+    color: #003399;
+    font-size: 1.6em;
+    font-weight: bold;
+    max-width: 315px;
+    padding-top: 1em;
+    padding-left: 1.5em;
+  }
+  @media (max-width: @screen-small-phone) {
+    padding-left: 22px;
+    padding-right: 22px;
   }
   @media (max-width: @screen-tablet-max) {
     padding-top: 12px;
@@ -254,8 +282,13 @@ html.larger {
   ul {
     .no-list;
     margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
   li {
@@ -397,6 +430,8 @@ footer {
   -moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed',endColorstr='#dfdfdf');
   background-color: #003399;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
   border-radius: 6px;
