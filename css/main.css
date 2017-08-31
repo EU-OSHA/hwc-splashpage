@@ -451,13 +451,33 @@ html.larger .page-footer a:hover {
   padding: 0 0.8rem;
   vertical-align: bottom;
 }
+.page-header .hw-logo img {
+  width: 150px;
+  height: auto;
+}
+.page-header .eu-logo img {
+  padding-top: 85px;
+}
+.page-header .eu-logo a img {
+  padding-top: 10px;
+}
 .page-header .logo {
   border-right: 1px solid;
 }
 .page-header .title {
-  width: 9.33333333rem;
-  font-size: 1.2rem;
-  font-weight: 700;
+  width: auto;
+  color: #003399;
+  font-size: 1.6em;
+  font-weight: bold;
+  max-width: 315px;
+  padding-top: 1em;
+  padding-left: 1.5em;
+}
+@media (max-width: 320px) {
+  .page-header {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
 }
 @media (max-width: 841px) {
   .page-header {
@@ -585,6 +605,10 @@ html.larger .page-footer a:hover {
 }
 @media (min-width: 842px) {
   #banner {
+    background: -webkit-linear-gradient(left, #adc600 0%, #68b11e 100%);
+    background: -o-linear-gradient(left, #adc600 0%, #68b11e 100%);
+    background: -ms-linear-gradient(left, #adc600 0%, #68b11e 100%);
+    background: -moz-linear-gradient(left, #adc600 0%, #68b11e 100%);
     background: linear-gradient(to right, #adc600 0%, #68b11e 100%);
     text-align: left;
   }
@@ -663,10 +687,10 @@ html.larger .page-footer a:hover {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 #downloads li {
   display: inline-block;
@@ -796,6 +820,8 @@ footer .credits {
   -moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
   background-color: #003399;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
   border-radius: 6px;
   border: 1px solid white;
   color: white;
