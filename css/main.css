@@ -496,7 +496,7 @@ html.larger .page-footer a:hover {
     width: auto;
   }
   .page-header .logo > img.pull-left {
-    max-height: 30px;
+    padding-top: 50px;
   }
   .page-header .title {
     display: none;
