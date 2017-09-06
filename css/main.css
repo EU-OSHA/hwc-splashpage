@@ -501,8 +501,8 @@ html.larger .page-footer a:hover {
     max-height: 80px;
     width: auto;
   }
-  .page-header .logo img.pull-left {
-    max-height: 30px;
+  .page-header .logo > img.pull-left {
+    padding-top: 50px;
   }
   .page-header .title {
     display: none;
