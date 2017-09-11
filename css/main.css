@@ -479,12 +479,6 @@ html.larger .page-footer a:hover {
     padding-right: 22px;
   }
 }
-@media (max-width: 320px) {
-  .page-header {
-    padding-left: 22px;
-    padding-right: 22px;
-  }
-}
 @media (max-width: 841px) {
   .page-header {
     padding-top: 12px;
@@ -568,7 +562,7 @@ html.larger .page-footer a:hover {
 #banner .banner-title {
   margin-bottom: 0;
   font-weight: 700;
-  font-size: 2em;
+  font-size: 2.3em;
   line-height: 1.2;
 }
 #banner .time-and-counters {
