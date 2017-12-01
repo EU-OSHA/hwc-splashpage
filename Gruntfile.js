@@ -76,5 +76,5 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', ['less', 'watch']);
   grunt.registerTask('dist', ['less', 'postcss', 'copy', 'uglify']);
-  grunt.registerTask('pack', ['less', 'postcss', 'copy', 'uglify', 'replace', 'zip']);
+  grunt.registerTask('pack', ['less', 'postcss', 'copy', 'uglify', 'zip']);
 };
