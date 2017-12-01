@@ -61,18 +61,6 @@ module.exports = function(grunt) {
         }
       }
     },
-    replace: {
-      piwik_siteid: {
-        src: ['*.html'],
-        overwrite: true,
-        replacements: [
-          {
-            from: '["setSiteId", "11"]',
-            to: '["setSiteId", "2"]'
-        }
-        ]
-      }
-    },
     zip: {
       'release.zip': [
         'css/main.css',

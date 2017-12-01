@@ -33,7 +33,7 @@ This will create release.zip that is deployable in root directory of the web ser
 
 3. Visit the *Release* tab and draft a new release, add comments, and upload the ``release.zip`` (first rename to next increment i.e ``release-1.2.4.zip``)
 
-Info: The ``grunt pack`` compiles the LESS files into CSS, minifies the JS, and replace the Piwik production key in each HTML.
+Info: The ``grunt pack`` compiles the LESS files into CSS, minifies the JS.
 
 ## Deployment guidelines
 
