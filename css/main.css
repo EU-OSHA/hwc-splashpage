@@ -735,6 +735,10 @@ html.larger .page-footer a:hover {
   height: 17px;
   background: url('../img/osha-bg-arrow.png') center center no-repeat;
 }
+#text {
+  text-align: center;
+  color: black;
+}
 #message {
   text-align: center;
   color: black;
